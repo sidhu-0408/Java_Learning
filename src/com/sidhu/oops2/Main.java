@@ -10,5 +10,14 @@ public class Main {
 
         ca.showBalance();
         ca.calculateInterest();
+
+        Payment upi = new UPIPayment();
+        Payment credit = new CreditCardPayment();
+
+        upi.pay(500);
+        upi.showTransaction();
+
+        credit.pay(1200);
+        credit.showTransaction();
     }
 }
